@@ -4,9 +4,6 @@ const userController = {};
 
 userController.signup = (req, res) => {
   const { username, password } = req.body;
-  console.log(req.body);
-  // Validation
-
   const user = new db.User({
     username,
     password

@@ -8,7 +8,7 @@ import postController from './controllers/postController';
 const routes = express();
 
 // Home route Routes
-routes.get('/home', homeController.home);
+routes.get('/', homeController.home);
 
 
 // User Routes

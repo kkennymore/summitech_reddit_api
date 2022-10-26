@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 
 import routes from './routes';
 
-mongoose.connect('mongodb://localhost:27017/summitech_posts', () => {
+mongoose.connect('mongodb://kkennymore:Etiosa11%2F%2F@localhost:27017/?authMechanism=DEFAULT&authSource=summitech_posts', () => {
   console.log('Contected to mongodb...');
 });
 
