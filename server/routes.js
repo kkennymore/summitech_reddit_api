@@ -19,6 +19,7 @@ routes.post('/logout', userController.logout);
 routes.post('/create_sub', postController.createSub);
 routes.post('/edit_sub', postController.editSub);
 routes.get('/get_post', postController.getPost);
-routes.post('/add_post', postController.addPost);
+routes.get('/get_post/:postId', postController.getSinglePost);
+routes.post('/add_post', postController.Post);
 
 export default routes;
