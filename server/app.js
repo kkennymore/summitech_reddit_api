@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import "regenerator-runtime/runtime.js";
 
 import routes from './routes';
 

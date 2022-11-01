@@ -41,6 +41,27 @@ postController.editSub = (req, res) => {
   //   });
 };
 
+/**update posts */
+postController.updatePost = async (req, res) => {
+  /**update posts */
+  try {
+    const id = req.params.id; //this is the url id passed to be updated
+    const updates = req.body; //this is the data to be updated
+    const options = { new: true }; //this will make the updated data to be returned
+    //call the user model to be updated
+    const result = await db.Post.findByIdAndUpdate(id, updates, options);
+    res.json({
+      status: true,
+      data: result,
+    }); //this is to send back the updated data
+  } catch (error) {
+    res.json({
+      status: true,
+      message: error,
+    });
+  }
+};
+
 /**get single post */
 postController.getSinglePost = (req, res) => {
   db.Post.find({ _id: req.params.postId })
